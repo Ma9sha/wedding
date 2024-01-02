@@ -33,7 +33,7 @@ include 'header.php';
             <div class="container-wedding__teaser-card">
                 <h3><?php echo ($event['NAME']); ?></h3>
                 <div class="container-wedding__teaser-info"><?php echo ($event['DESCRIPTION']); ?></div>
-                <div class="container-wedding__teaser-info"><?php echo date('d-m-Y', strtotime($event['DATE'])); ?></div>
+                <div class="container-wedding__teaser-info"><?php echo 'Date: ' . date('d-m-Y', strtotime($event['DATE'])); ?></div>
                 <?php if ($event['START_TIME'] < ('12:00')) 
                 { $start_time = $event['START_TIME'] . 'am'; }
                 else {$start_time = $event['START_TIME'] . 'pm'; }?>
